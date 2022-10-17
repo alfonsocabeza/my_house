@@ -15,6 +15,7 @@ public class Picture
     private Square window;
     private Triangle roof;
     private Circle sun;
+    private Person person;
     private Square path;
 
     /**
@@ -68,6 +69,11 @@ public class Picture
     public void atardecer()
     {
         sun.slowMoveVertical(80);
+        person = new Person(); 
+        person.moveVertical(40);
+        person.moveHorizontal(-150);
+        person.makeVisible();
+        person.slowMoveHorizontal(200);
     }
     
     /**
